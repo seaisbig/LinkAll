@@ -2,7 +2,7 @@ package kris.iotest;
 
 import java.io.*;
 
-public class inputStream {
+public class inputStreamTest1 {
         public static void main(String[]args) throws IOException {
             //创建源
             File f=new File("F:/note/a.txt");
@@ -14,8 +14,8 @@ public class inputStream {
                 //操作(读取)
                 int temp;
                 while((temp=is.read())!=-1) //temp=is.read()表达式整体的值就是temp的值
-                {                           //is.read()会读取单个数据，当数据读取完毕时，返回-1
-                    System.out.println((char)temp);
+                {
+                    System.out.print((char)temp);
                 }
 
             } catch (FileNotFoundException e) {

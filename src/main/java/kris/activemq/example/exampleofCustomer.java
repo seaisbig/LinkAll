@@ -1,4 +1,4 @@
-package kris.activeqm;
+package kris.activemq.example;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
 
