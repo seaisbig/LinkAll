@@ -5,7 +5,7 @@ import org.apache.activemq.ActiveMQConnectionFactory;
 /**
  * @Author
  * @Description: IntelliJ IDEA
- * @create 2020/5/1313:20
+ * @create 2022/3/17
  */
 public class MqTopicProduct {
 
