@@ -8,7 +8,7 @@ import javax.jms.MessageListener;
 import javax.jms.TextMessage;
 //消息监听(多线程接收)
 public class Listener3 implements MessageListener{
-    private ExecutorService threadPool =Executors.newFixedThreadPool(8);
+    private final ExecutorService threadPool =Executors.newFixedThreadPool(8);
     @Override
     public void onMessage(final Message message) {
         threadPool.execute(() -> {

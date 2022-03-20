@@ -18,8 +18,7 @@ public class JMSProducerThread {
     private static final int SENDNUM = 10; // 发送的消息数量
     ConnectionFactory connectionFactory = null; // 连接工厂
     private Connection connection = null;
-    private Session session = null;
-    private Destination destination = null; // 消息的目的地
+
     public void init() {
 // 实例化连接工厂
         connectionFactory = new ActiveMQConnectionFactory(JMSProducerThread.USERNAME, JMSProducerThread.PASSWORD, JMSProducerThread.BROKEURL);
@@ -33,8 +32,9 @@ public class JMSProducerThread {
     public void produce() {
         try {
             MessageProducer messageProducer; // 消息生产者
-            session = connection.createSession(Boolean.TRUE, Session.AUTO_ACKNOWLEDGE); // 创建Session
-            destination = session.createQueue("queue1");
+            Session session = connection.createSession(Boolean.TRUE, Session.AUTO_ACKNOWLEDGE); // 创建Session
+            // 消息的目的地
+            Destination destination = session.createQueue("queue1");
             messageProducer = session.createProducer(destination); // 创建消息生产者
             for (int i = 0; i < SENDNUM; i++) {
                 TextMessage message = session.createTextMessage("ActiveMQ中" + Thread.currentThread().getName() + "线程发送的数据" + ":" + i);
