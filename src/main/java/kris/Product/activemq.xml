@@ -1,0 +1,7 @@
+<networkConnectors>
+    <networkConnector uri="masterslave:(tcp://192.168.1.200:61616,tcp://192.168.1.201:61616)" userName="admin" password="admin">
+        <staticallyIncludedDestinations>
+            <queue physicalName="official_queue"/>
+        </staticallyIncludedDestinations>
+    </networkConnector>
+</networkConnectors>

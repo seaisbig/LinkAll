@@ -15,7 +15,7 @@ import org.apache.activemq.ActiveMQConnectionFactory;
  * 消息消费者
  * @author kris
  *
- */
+ **/
 public class MqTopicProduct {
 
     public static void main(String[] args) throws JMSException {
@@ -43,5 +43,4 @@ public class MqTopicProduct {
         session.close();
         connection.close();
     }
-
 }
