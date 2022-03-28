@@ -11,4 +11,8 @@ public class Bside {
         operation.getter();
         setIn.set("");
     }
+    public static void insert(int x){
+
+    }
+
 }
